@@ -22,7 +22,7 @@ class MyRecycleViewAdapter(private val superhero: List<SuperheroResponse>?) :
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         holder.title.text = superhero?.get(position)?.name
-        holder.work.text = superhero?.get(position)?.works?.occupation
+        holder.work.text = superhero?.get(position)?.work?.occupation
         Glide.with(holder.itemView)
             .load(superhero?.get(position)?.images?.xs)
             .into(holder.image)

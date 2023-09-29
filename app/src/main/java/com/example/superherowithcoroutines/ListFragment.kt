@@ -31,12 +31,11 @@ class ListFragment : Fragment() {
                 is MyViewModel.UiState.Processing -> "Processing..."
                 is MyViewModel.UiState.Error -> "Error..."
                 is MyViewModel.UiState.Result -> {
-                    val myAdapter = MyRecycleViewAdapter(uiState.superheroList)
+                    val myAdapter = MyRecycleViewAdapter(uiState.superheroList!!)
                     listView.adapter = myAdapter
+                    listView.layoutManager = LinearLayoutManager(requireContext())
                 }
             }
         }
-
-        listView.layoutManager = LinearLayoutManager(requireContext())
     }
 }

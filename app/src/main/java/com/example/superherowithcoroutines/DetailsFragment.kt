@@ -32,7 +32,7 @@ class DetailsFragment : Fragment() {
         detailsImage = view.findViewById(R.id.detailsImage)
 
         detailsTitle.text = oldSuperhero?.name
-        detailsDesc.text = oldSuperhero?.works?.occupation
+        detailsDesc.text = oldSuperhero?.work?.occupation
         Glide.with(view)
             .load(oldSuperhero?.images?.xs)
             .into(detailsImage)
